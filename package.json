@@ -1,0 +1,22 @@
+{
+  "author": "Giving Stage Team",
+  "name": "cine.io",
+  "domains": [
+    "cine.io"
+  ],
+  "version": "0.0.1",
+  "description": "cine.io addon test site",
+  "scripts": {
+  },
+  "repository": "git@heroku.com:cine-addon-test.git",
+  "dependencies": {
+    "express": "3.4.8",
+  },
+  "devDependencies": {
+  },
+  "license": "Copyrighted / All Rights Reserved",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "private": true
+}

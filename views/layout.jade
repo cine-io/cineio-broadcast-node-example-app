@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title cine.io example app
+    script(src='//cdn.cine.io/cineio.js')
+    script CineIO.init("#{publicKey}")
+
+  body
+    header
+      h1 Cine.io example app - #{title}
+    .container
+      .main-content
+        block content
+    footer
+      p An app with cine.io api

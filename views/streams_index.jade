@@ -1,0 +1,11 @@
+extend layout
+block content
+  a(href='/') Home
+  h3 Your streams
+  ul
+    each stream in streams
+      li
+        a(href=("stream/" + stream.id))= stream.id
+  div
+    div Api response
+    code= streamsData

@@ -14,7 +14,14 @@ block content
       div(id="publisher-example")
     div(style="float: left; width: 300px; margin: 20px;")
       div(id="player-example")
-  button(onClick='toggleBroadcast(this)' id='toggle-click') Start broadcasting
+  div
+    button(onClick='toggleBroadcast(this)' id='toggle-click') Start broadcasting
+  div(style='margin-top: 20px')
+    a(href=('/stream/'+id+'/fmleProfile')) Download the Flash Media Live Encoder profile
+    span
+      span= " - to use with Adobe's "
+      a(href="http://www.adobe.com/products/flash-media-encoder.html" target='_blank') Flash Media Live Encoder
+      span .
   script.
     var playing = false;
     window.publisher = CineIO.publish('!{id}', '!{password}', 'publisher-example');

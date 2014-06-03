@@ -37,6 +37,14 @@ app.get('/stream/:id', function(req, res){
   });
 });
 
+// download the fmle profile for a stream
+app.get('/stream/:id/fmleProfile', function(req, res){
+  client.streams.fmleProfile(req.params.id, function(err, profile){
+    res.attachment(""+req.params.id+".xml");
+    res.send(profile);
+  });
+});
+
 var port = process.env.PORT;
 port || (port = 3000);
 

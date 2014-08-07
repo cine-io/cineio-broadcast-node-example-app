@@ -22,3 +22,14 @@ This is an example application in Node.js showing the capabilities of [cine.io](
     ```term
     $ node index.js
     ```
+
+### Deploy this app to heroku
+
+```term
+git clone git@github.com:cine-io/cineio-node-example-app.git
+cd cineio-node-example-app/
+heroku apps:create
+git push heroku master
+heroku addons:add cine
+heroku open
+```

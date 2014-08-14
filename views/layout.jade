@@ -8,8 +8,11 @@ html
   body
     header
       h1 Cine.io example app - #{title}
+      p #[a(href="https://www.cine.io/docs") Documentation] | #[a(href="https://github.com/cine-io/cineio-node") Node Package] | #[a(href="https://github.com/cine-io/js-sdk") JS SDK]
+    hr
     .container
       .main-content
         block content
+    hr
     footer
-      p An app with cine.io api
+      p An app built with #[a(href='https://www.cine.io') cine.io] api

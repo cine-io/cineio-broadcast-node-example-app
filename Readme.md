@@ -1,11 +1,16 @@
 # cine.io Example Application Node.js
 
-This is an example application in Node.js showing the capabilities of [cine.io](https://www.cine.io). It uses the [cine.io JS SDK](https://github.com/cine-io/js-sdk) and the [cine.io Node.js package](https://github.com/cine-io/cineio-node).
+This is an example application in Node.js showing the capabilities of [cine.io][cineio]. It uses the [cine.io JS SDK][cineio-js-sdk] and the [cine.io Node.js package][cineio-node].
 
+## Try it on Heroku
 
-## How to Use
+Click the button below to magically deploy up this example to your Heroku account. A [cine.io][cineio] plan will automatically be included for free.
 
-1. Sign up for your own API key at cine.io.
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/cine-io/cineio-node-example-app)
+
+## Run Locally
+
+1. Sign up for your own API key at [cine.io][cineio].
 1. Set up your environment:
 
     ```term
@@ -23,13 +28,7 @@ This is an example application in Node.js showing the capabilities of [cine.io](
     $ node index.js
     ```
 
-### Deploy this app to heroku
-
-```term
-git clone git@github.com:cine-io/cineio-node-example-app.git
-cd cineio-node-example-app/
-heroku apps:create
-git push heroku master
-heroku addons:add cine
-heroku open
-```
+<!-- external links -->
+[cineio]:https://www.cine.io/
+[cineio-node]:https://github.com/cine-io/cineio-node
+[cineio-js-sdk]:https://github.com/cine-io/js-sdk

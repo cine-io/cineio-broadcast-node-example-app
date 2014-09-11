@@ -11,15 +11,19 @@ app.set('view engine', 'jade')
 
 // Show the project details
 app.get('/', function(req, res){
-  client.project.get(function(err, project){
-    res.render('project_show', {title: 'Project/show', publicKey: publicKey, project: project, projectData: JSON.stringify(project)})
-  });
+  if (publicKey || secretKey){
+    client.project.get(function(err, project){
+      res.render('project_show', {title: 'Project/show', project: project, projectData: JSON.stringify(project)})
+    });
+  } else {
+    res.render('not_configured', {title: 'Not Configured'})
+  }
 });
 
 // Show all the streams
 app.get('/streams', function(req, res){
   client.streams.index(function(err, streams){
-    res.render('streams_index', {title: 'Streams/index', publicKey: publicKey, streams: streams, streamsData: JSON.stringify(streams)})
+    res.render('streams_index', {title: 'Streams/index', streams: streams, streamsData: JSON.stringify(streams)})
   });
 });
 

@@ -1,10 +1,20 @@
-var express = require('express');
-var app = express();
-var CineIO = require('cine-io');
-// CINE IO API KEYS
-var publicKey = process.env.CINE_IO_PUBLIC_KEY;
-var secretKey = process.env.CINE_IO_SECRET_KEY;
-var client = CineIO.init({secretKey: secretKey});
+var
+  express = require('express')
+  , app = express()
+  , port = process.env.PORT || 3000
+  , CineIO = require('cine-io')
+  // CINE IO API KEYS
+  , keys = require('./fetch_api_keys_from_environment')()
+  , publicKey = keys.publicKey
+  , secretKey = keys.secretKey
+  // Initialize cine.io api client
+  , client = CineIO.init({secretKey: secretKey})
+  , server
+;
+
+if (publicKey === undefined && secretKey === undefined){
+  throw new Error("cine.io api keys were not found.");
+}
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
@@ -49,9 +59,6 @@ app.get('/stream/:id/fmleProfile', function(req, res){
   });
 });
 
-var port = process.env.PORT;
-port || (port = 3000);
-
-var server = app.listen(port, function() {
+server = app.listen(port, function() {
   console.log('Listening on port %d', server.address().port);
 });

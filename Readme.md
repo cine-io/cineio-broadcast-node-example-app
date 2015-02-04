@@ -1,6 +1,6 @@
-# cine.io Example Application Node.js
+# cine.io Broadcast Example Application Node.js
 
-This is an example application in Node.js showing the capabilities of [cine.io][cineio]. It uses the [cine.io JS SDK][cineio-js-sdk] and the [cine.io Node.js package][cineio-node].
+This is an example application in Node.js showing the capabilities of [cine.io broadcast][cineio]. It uses the [cine.io JS SDK][cineio-js-sdk] and the [cine.io Node.js package][cineio-node].
 
 ## Try it on Heroku
 
@@ -29,6 +29,6 @@ Click the button below to magically deploy up this example to your Heroku accoun
     ```
 
 <!-- external links -->
-[cineio]:https://www.cine.io/
+[cineio]:https://www.cine.io/products/broadcast
 [cineio-node]:https://github.com/cine-io/cineio-node
 [cineio-js-sdk]:https://github.com/cine-io/js-sdk

@@ -1,5 +1,5 @@
 {
-    "name": "Cine.io Node Example",
+    "name": "Cine.io Broadcast Node Example",
     "description": "A simple app in Node.js that can create streams, publish to them, and play them back",
     "website": "https://www.cine.io/",
     "repository": "https://github.com/cine-io/cineio-node-example-app",
